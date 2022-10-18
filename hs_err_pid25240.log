@@ -1,0 +1,218 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3535), pid=25240, tid=27624
+#
+# JRE version:  (17.0.3+6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.3+6-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 -Dcom.android.sdklib.toolsdir=C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\\.. com.android.sdklib.tool.sdkmanager.SdkManagerCli --list
+
+Host: AMD Ryzen 5 3550H with Radeon Vega Mobile Gfx  , 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.608)
+Time: Mon Oct 17 17:36:00 2022 India Standard Time elapsed time: 0.016626 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000228acca16e0):  JavaThread "Unknown thread" [_thread_in_vm, id=27624, stack(0x000000d8b2900000,0x000000d8b2a00000)]
+
+Stack: [0x000000d8b2900000,0x000000d8b2a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x645e5a]
+V  [jvm.dll+0x7f6fc4]
+V  [jvm.dll+0x7f877e]
+V  [jvm.dll+0x7f8dd3]
+V  [jvm.dll+0x234bb8]
+V  [jvm.dll+0x642d9a]
+V  [jvm.dll+0x637762]
+V  [jvm.dll+0x2f2d09]
+V  [jvm.dll+0x2f9ee6]
+V  [jvm.dll+0x3459ea]
+V  [jvm.dll+0x345c2f]
+V  [jvm.dll+0x2c91a8]
+V  [jvm.dll+0x2ca139]
+V  [jvm.dll+0x7ca6e1]
+V  [jvm.dll+0x352e01]
+V  [jvm.dll+0x7aab0e]
+V  [jvm.dll+0x3ce743]
+V  [jvm.dll+0x3d0181]
+C  [jli.dll+0x51af]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1244d]
+C  [ntdll.dll+0x5df78]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffeba82d718, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000228acd0c990 GCTaskThread "GC Thread#0" [stack: 0x000000d8b2a00000,0x000000d8b2b00000] [id=33860]
+  0x00000228acd1d6c0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d8b2b00000,0x000000d8b2c00000] [id=520]
+  0x00000228acd1e820 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000d8b2c00000,0x000000d8b2d00000] [id=19316]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffeba01a397]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000228acc9d5c0] Heap_lock - owner thread: 0x00000228acca16e0
+
+Heap address: 0x0000000702e00000, size: 4050 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000702e00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffeba3dd929]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.012 Loaded shared library C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6e8d80000 - 0x00007ff6e8d8d000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\java.exe
+0x00007fff81eb0000 - 0x00007fff820c4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff7fdf0000 - 0x00007fff7feb2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff7f6d0000 - 0x00007fff7fa6c000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff7fb90000 - 0x00007fff7fca1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff7c020000 - 0x00007fff7c035000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\VCRUNTIME140.dll
+0x00007fff478a0000 - 0x00007fff478b8000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\jli.dll
+0x00007fff80940000 - 0x00007fff80aea000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff69c70000 - 0x00007fff69efe000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d\COMCTL32.dll
+0x00007fff7fd00000 - 0x00007fff7fda7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff7f450000 - 0x00007fff7f476000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff7fcb0000 - 0x00007fff7fcd9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff7fa70000 - 0x00007fff7fb82000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff7f5c0000 - 0x00007fff7f65a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff7fdb0000 - 0x00007fff7fde1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff3ccf0000 - 0x00007fff3cd8b000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\msvcp140.dll
+0x00007ffeb9d40000 - 0x00007ffeba95b000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\server\jvm.dll
+0x00007fff81660000 - 0x00007fff8170e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff81cd0000 - 0x00007fff81d74000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff80820000 - 0x00007fff80935000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff81650000 - 0x00007fff81658000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff762a0000 - 0x00007fff762d4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff790f0000 - 0x00007fff790fa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff5da30000 - 0x00007fff5da39000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff80000000 - 0x00007fff80071000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff7e3d0000 - 0x00007fff7e3e8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff6a490000 - 0x00007fff6a49a000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\jimage.dll
+0x00007fff714f0000 - 0x00007fff7171e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff80390000 - 0x00007fff80719000 	C:\WINDOWS\System32\combase.dll
+0x00007fff81d80000 - 0x00007fff81e57000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fff5c100000 - 0x00007fff5c132000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff7f540000 - 0x00007fff7f5bb000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff3d4c0000 - 0x00007fff3d4e5000 	C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.608_none_a9444ca7c10bb01d;C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Dcom.android.sdklib.toolsdir=C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\\.. 
+java_command: com.android.sdklib.tool.sdkmanager.SdkManagerCli --list
+java_class_path (initial): C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\dvlib-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\jimfs-1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\jsr305-1.3.9.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\repository-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\j2objc-annotations-1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\layoutlib-api-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\gson-2.3.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\httpcore-4.2.5.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\commons-logging-1.1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\commons-compress-1.12.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\annotations-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\error_prone_annotations-2.0.18.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\animal-sniffer-annotations-1.14.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\httpclient-4.2.6.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4246732800                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4246732800                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Amazon Corretto\jdk17.0.3_6
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+CLASSPATH=C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\dvlib-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\jimfs-1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\jsr305-1.3.9.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\repository-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\j2objc-annotations-1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\layoutlib-api-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\gson-2.3.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\httpcore-4.2.5.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\commons-logging-1.1.1.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\commons-compress-1.12.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\annotations-26.0.0-dev.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\error_prone_annotations-2.0.18.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\animal-sniffer-annotations-1.14.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\httpclient-4.2.6.jar;C:\Program Files\Unity\Hub\Editor\2020.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\tools\bin\..\lib\commons-codec-1.6.jar;C:\P
+PATH=C:\Program Files\PlasticSCM5\server;C:\Program Files\PlasticSCM5\client;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Amazon Corretto\jdk17.0.3_6\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Crucial\Crucial Storage Executive;C:\Users\kusha\AppData\Local\Microsoft\WindowsApps;C:\Users\kusha\AppData\Local\GitHubDesktop\bin;C:\Users\kusha\AppData\Roaming\npm;C:\Users\kusha\.dotnet\tools;
+USERNAME=kusha
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.608)
+OS uptime: 1 days 4:32 hours
+
+CPU: total 8 (initial active 8) (8 cores per cpu, 2 threads per core) family 23 model 24 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt
+
+Memory: 4k page, system-wide physical 16193M (3967M free)
+TotalPageFile size 22033M (AvailPageFile size 79M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 314M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.3+6-LTS) for windows-amd64 JRE (17.0.3+6-LTS), built on Apr 15 2022 22:16:02 by "Administrator" with MS VC++ 15.9 (VS2017)
+
+END.
